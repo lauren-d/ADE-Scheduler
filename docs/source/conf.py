@@ -1,3 +1,15 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2020-2024 ADE-Scheduler.
+#
+# ADE-Scheduler is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+
+"""Sphinx configuration."""
+
+import os
+import sys
+
 # type: ignore
 # Configuration file for the Sphinx documentation builder.
 #
@@ -11,8 +23,6 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
 
 sys.path.insert(0, os.path.abspath("../.."))
 sys.path.insert(0, os.path.abspath("../../backend"))
