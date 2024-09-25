@@ -157,7 +157,7 @@ app.config["ADE_FAKE_API"] = (
     else False
 )
 
-redis_connection_pool = ConnectionPool.from_url(os.environ['ADE_REDIS_URL'])
+redis_connection_pool = ConnectionPool.from_url(os.environ["ADE_REDIS_URL"])
 
 manager = mng.Manager(
     ade.Client(app.config["ADE_API_CREDENTIALS"])
@@ -269,6 +269,10 @@ kdf = PBKDF2HMAC(
 )
 key = base64.urlsafe_b64encode(kdf.derive(password))
 app.config["FERNET"] = Fernet(key)
+
+app.config["ADE_SCHEDULER_IMPORT_EXTERNAL_CAL"] = os.environ[
+    "ADE_SCHEDULER_IMPORT_EXTERNAL_CAL"
+]
 
 
 # Jinja filter for autoversionning
